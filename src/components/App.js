@@ -1,19 +1,16 @@
 import video from "../data/video.js";
+import VideoContainer from "./VideoContainer.jsx";
+import CommentContainer from "./CommentContainer.jsx";
+
 
 function App() {
-  console.log("Here's your data:", video);
 
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+      <VideoContainer />
+      <CommentContainer key={video.comments.id} user={video.comments.user} comment={video.comments.comment}/>
     </div>
+    
   );
 }
 
