@@ -1,8 +1,6 @@
-import video from "../data/video"
 import { useState } from "react"
 
 function VideoInfo({ title, views, createdAt, upvotes, downvotes }){
-    console.log(upvotes);
     const [Liked, setLiked] = useState(upvotes)
     const [Disliked, setDisliked] = useState(downvotes)
     return (

@@ -2,18 +2,19 @@ import Comments from "./Comments"
 import video from "../data/video"
 
 
-function CommentContainer({comment, user}){
-    console.log(comment);
+function CommentContainer(){
+
     
-    return(
-        <div>
-            <h1>
-                {comment}
-                {user}
-            </h1>
-        </div>
+    return (
+        
+        <>
+            {video.comments.map(vid => {
+                return <Comments key={vid.id} user={vid.user} comment={vid.comment}/>
+            })}
+        </>
     )
-    }
+}
+    
         
     
 
